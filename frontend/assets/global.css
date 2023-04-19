@@ -1,0 +1,14 @@
+.home-title {
+    margin-top: 200px;
+    background-image: linear-gradient(90deg, #4667c6, #8fbef6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rounded-button {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
