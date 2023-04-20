@@ -97,7 +97,7 @@ export const Books = ({isSignedIn, contractId, wallet}) => {
                                     <div>{getQuantity(item)}</div>
                                 </Card.Title>
                                 <Card.Text>
-                                    $ {item.priceInDollar} = {item.priceInDollar*nearToDollar} Ⓝ 
+                                    $ {item.priceInDollar} = {Math.round(item.priceInDollar*nearToDollar*100)/100} Ⓝ 
                                 </Card.Text>
                                 <Button variant="primary" onClick={() => handleAddToBasket(item)}>Add to Basket</Button>
                             </Card.Body>

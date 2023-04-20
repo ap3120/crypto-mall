@@ -66,15 +66,15 @@ export const Orders = ({isSignedIn, contractId, wallet}) => {
                                             return (
                                                 <tr key={i}>
                                                     <td>{item.name}</td>
-                                                    <td>$ {item.priceInDollar} = {item.priceInDollar*nearToDollar} Ⓝ </td>
+                                                    <td>$ {item.priceInDollar} = {Math.round(item.priceInDollar*nearToDollar*100)/100} Ⓝ </td>
                                                     <td>{item.quantity}</td>
-                                                    <td>$ {item.priceInDollar*item.quantity} = {item.priceInDollar*item.quantity*nearToDollar} Ⓝ </td>
+                                                    <td>$ {item.priceInDollar*item.quantity} = {Math.round(item.priceInDollar*item.quantity*nearToDollar*100)/100} Ⓝ </td>
         </tr>
                                             );
                                         })}
                                     </tbody>
                                 </Table>
-                                <h3 className='mt-2'>Total: $ {order.totalPrice} = {order.totalPrice*nearToDollar} Ⓝ </h3>
+                                <h3 className='mt-2'>Total: $ {order.totalPrice} = {Math.round(order.totalPrice*nearToDollar*100)/100} Ⓝ </h3>
                             </Accordion.Body>
                         </Accordion.Item>
                     );

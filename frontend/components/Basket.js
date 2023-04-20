@@ -82,7 +82,7 @@ export const Basket = ({isSignedIn, contractId, wallet}) => {
                                     <div>{item.quantity}</div>
                                 </Card.Title>
                                 <Card.Text>
-                                    $ {item.priceInDollar*item.quantity} = {item.priceInDollar*nearToDollar*item.quantity} Ⓝ 
+                                    $ {item.priceInDollar*item.quantity} = {Math.round(item.priceInDollar*nearToDollar*item.quantity*100)/100} Ⓝ 
                                 </Card.Text>
                                 <div className='d-flex justify-content-between'>
                                     <Button className='rounded-button' variant='secondary' onClick={() => handleAddToBasket(item)}>+</Button>
@@ -94,7 +94,7 @@ export const Basket = ({isSignedIn, contractId, wallet}) => {
                     ) 
                 })}
             </Container>
-            <h3>Total: $ {total} = {nearToDollar*total} Ⓝ </h3>
+            <h3>Total: $ {total} = {Math.round(nearToDollar*total*100)/100} Ⓝ </h3>
             {isSignedIn? (
                 <Button onClick={handleOrder}>Buy</Button>
             ) : (
