@@ -7,7 +7,7 @@ import './assets/global.css';
 import {BrowserRouter as Router, Switch, Routes, Route, Link} from "react-router-dom";
 
 // Components
-import {Navbar} from './components/Navbar.js';
+import {MyNavbar} from './components/MyNavbar.js';
 import {Home} from './components/Home.js';
 import {PCandElectronics} from './components/PCandElectronics.js';
 import {Clothing} from './components/Clothing.js';
@@ -20,7 +20,7 @@ export default function App({ isSignedIn, contractId, wallet }) {
 
     return (
         <Router>
-            <Navbar isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>
+            <MyNavbar isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>
             <Routes>
                 <Route path='/' element={<Home isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>}/>
                 <Route path='/pc-and-electronics' element={<PCandElectronics isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>}/>

@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 
-export const Navbar = ({isSignedIn, contractId, wallet}) => {
+export const MyNavbar = ({isSignedIn, contractId, wallet}) => {
     const [nearToDollar, setNearToDollar] = useState('');
 
     const connect = () => {wallet.signIn()}
