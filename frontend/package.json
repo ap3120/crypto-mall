@@ -4,7 +4,7 @@
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
     "start": "./start.sh",
-    "build": "npm run build"
+    "build": "npx -p parcel-bundler parcel build index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
