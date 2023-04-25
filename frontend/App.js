@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/global.css';
 // react router
-import {BrowserRouter as Router, Switch, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Routes, Route, Link, Navigate} from "react-router-dom";
 
 // Components
 import {MyNavbar} from './components/MyNavbar.js';
@@ -29,6 +29,7 @@ export default function App({ isSignedIn, contractId, wallet }) {
                 <Route path='/sport' element={<Sport isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>}/>
                 <Route path='/basket' element={<Basket isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>}/>
                 <Route path='/orders' element={<Orders isSignedIn={isSignedIn} contractId={contractId} wallet={wallet}/>}/>
+                <Route path='*' element={<Navigate to='/' replace />}/>
             </Routes>
         </Router>
     )    

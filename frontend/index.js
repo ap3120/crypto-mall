@@ -9,7 +9,7 @@ import {store} from './app/basketSlice.js';
 // NEAR
 import { Wallet } from './near-wallet';
 
-const CONTRACT_ADDRESS = process.env.CONTRACT_NAME || 'crypto-mall.neuneu.testnet';
+const CONTRACT_ADDRESS = process.env.CONTRACT_NAME;
 
 // When creating the wallet you can optionally ask to create an access key
 // Having the key enables to call non-payable methods without interrupting the user to sign

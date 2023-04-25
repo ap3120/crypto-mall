@@ -2,8 +2,7 @@ import { NearBindgen, near, call, view, UnorderedMap, initialize } from 'near-sd
 
 @NearBindgen({})
 class MyContract {
-    beneficiary: string = "neuneu.testnet";
-    //beneficiary: string = "yourWallet.testnet";
+    beneficiary: string = "yourWallet.testnet";
 
     orders = new UnorderedMap<Order[]>("orders");
 
